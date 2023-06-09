@@ -1,0 +1,102 @@
+@charset "UTF-8";
+*{box-sizing: border-box;}
+
+/* 	font-family: 'Gowun Dodum', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif; */
+body
+{
+	font-size:16px;
+	color:#000;
+	font-family: 'Gowun Dodum', sans-serif;
+}
+
+a,a:link
+{
+	color:#000;
+}
+
+table.bbsList
+{
+	width:100%;
+	border-bottom:2px solid #333;
+	margin-bottom:40px;
+}
+
+.bbsList th
+{
+	padding-top:10px;
+	padding-bottom:10px;
+	border-top:1px solid #999;
+	border-bottom:2px solid #999;
+	text-align:center;
+	position:relative;
+}
+
+.bbsList th:not(:last-child)::after
+{
+	content:"";
+	display:block;
+	width:1px;
+	height:10px;
+	position:absolute;
+	top:8px;
+	right:0;
+	background:#999;
+}
+
+.bbsList td
+{
+	padding:15px;
+	border-bottom:1px solid #999;
+}
+
+.bbsList td.title,.bbsList td.uname
+{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.button-group
+{
+	display:inline-block;
+	float:right;
+}
+
+.button-group a.btn
+{
+	margin-left:15px;
+	margin-right:15px;
+	color:#fff;
+}
+
+.button-group a.btn:last-child
+{
+	margin-right:0;
+}
+
+/* 세부 */
+
+.detail .info
+{
+	font-size:15px;
+	font-weight:bold;
+}
+
+.detail .detailview
+{
+	border:1px solid #ddd;
+	height:350px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
