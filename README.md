@@ -1,4 +1,4 @@
-# spring framework를 사용한 보드를 제작했습0니다.
+# spring framework를 사용한 게시판입니다.
 
 ##### spring framework와 spring mvc를 사용하여 spring에 대해 실력을 향상시켰습니다.
 ##### 회원가입이 따로 있지 않고, 게시판 작성 내에 아이디 비밀번호 입력란이 따로 있습니다.
