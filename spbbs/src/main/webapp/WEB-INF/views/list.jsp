@@ -56,31 +56,38 @@
 	<div class="row">
 		<div class="offset-md-3 col-md-6">
 			<ul class="pagination justify-content-center">
-				<li class="page-item disabled">
-					<a href="#" class="page-link">
+			
+			<c:if test="${pages.prev}">
+				<li class="page-item">
+					<a href="list${pages.makeQuery(pages.startPage-1)}" class="page-link">
 						이전
 					</a>
 				</li>
-				<li class="page-item active">
-					<a href="#" class="page-link">
-						1
+			</c:if>
+			<c:forEach begin="${pages.startPage}" end="${pages.endPage}" var="idx">
+				<c:choose>
+					<c:when test="${idx eq param.page}">
+						<li class="page-item active">
+					</c:when>
+					<c:when test="${param.page eq null && idx eq 1}">
+						<li class="page-item active">
+					</c:when>
+					<c:otherwise>
+						<li class="page-item">
+					</c:otherwise>
+				</c:choose>
+					<a href="list${pages.makeQuery(idx)}" class="page-link">
+						${idx}
 					</a>
 				</li>
+			</c:forEach>
+			<c:if test="${pages.next && pages.endPage>0}">
 				<li class="page-item">
-					<a href="#" class="page-link">
-						2
-					</a>
-				</li>
-				<li class="page-item">
-					<a href="#" class="page-link">
-						3
-					</a>
-				</li>
-				<li class="page-item">
-					<a href="#" class="page-link">
+					<a href="list${pages.makeQuery(pages.endPage+1)}" class="page-link">
 						다음
 					</a>
 				</li>
+			</c:if>
 			</ul>
 		</div>
 		<div class="col-md-3">

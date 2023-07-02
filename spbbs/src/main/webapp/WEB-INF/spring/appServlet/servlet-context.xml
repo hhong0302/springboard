@@ -23,6 +23,15 @@
 	
 	<context:component-scan base-package="com.hong.spbbs" />
 	
+	<beans:bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<beans:property name="url" value="jdbc:mysql://localhost/spbbs?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="dnjsghd6861" />
+	</beans:bean>
 	
+	<beans:bean name="template" class="org.springframework.jdbc.core.JdbcTemplate">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
 	
 </beans:beans>
